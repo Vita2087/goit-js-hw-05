@@ -4,7 +4,12 @@
 // яка прийматиме один параметр users — масив об'єктів користувачів.
 
 // Функція має повертати масив усіх користувачів, відсортованих
-// за спаданням кількостій їх друзів(властивість friends).
+// за спаданням кількості їх друзів(властивість friends).
+
+const sortByDescendingFriendCount = (users) => {
+ return users.toSorted((user1, user2) => user2.friends.length - user1.friends.length);
+}
+
 
 console.log(
   sortByDescendingFriendCount([
